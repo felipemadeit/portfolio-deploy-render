@@ -1,0 +1,32 @@
+{% load static %}
+
+<header class="header">
+    <div id= logo>
+        <img src="{% static 'images/logo.png' %}" alt="creator-logo">
+    </div>
+    <nav class ="nav-bar">
+        <input type="checkbox" id="check">
+        <label  for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Projects</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">CV</a>
+            </li>
+        </ul>  
+        <div id ="toggle-btn">
+        </div>   
+    </nav>
+</header>

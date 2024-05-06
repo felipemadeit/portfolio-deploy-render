@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Helvetica,
+               Arial,
+               sans-serif,
+               "Apple Color Emoji",  /* Emojis*/
+               "Segoe UI Emoji", /* Emojis*/
+               "Segoe UI Symbol"; /* Emojis*/   
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Header styles*/
+
+.header {
+    height: 95px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 2px solid white ;
+    box-shadow: 0 0 15px white;
+}
+
+.header #logo {
+    width: 50px;
+    height: 90px;
+    margin-left: 17%;
+    margin-top: 30px;
+    text-decoration: none;
+    padding-top: 3px ;
+    cursor: pointer;
+
+}
+
+.header #logo a {
+    text-decoration: none;
+}
+
+.header #logo h1 {
+    transition: transform 0.5s ease;
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+
+.header #logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-bar {
+    margin-right: 10%;
+
+}
+
+.header .nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.header .nav-bar ul li {
+    margin-right: 40px;
+    padding-right: 15px;
+}
+
+.header .nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.header .nav-bar li:hover {
+    transform: scale(1.1);
+}
+
+/* Toggle button styles */
+
+.checkbtn {
+    font-size: 40px;
+    color: white;
+    float: right;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* Estilos para responsive del nav-bar */
+
+@media only screen and  (max-width: 740px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .header .nav-bar {
+        text-align: center;
+    }
+
+    ul {
+        position: fixed;
+        width: 50vh;
+        height: 100vh;
+        background-color: gray;
+        top: 95px;
+        left: -200%;
+        text-align: center;
+        transition: all 0.5s ;
+        display: block;
+        z-index: 1;
+    }
+
+    ul li {
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+
+
+
+    .header .nav-bar li {
+        display: block;
+    
+    }
+
+    li a:hover, li a.active {
+        background: none;
+    }
+
+    #check:checked ~ ul {
+        left: 0%;
+        width: 100%;
+        flex-direction: column ;
+        
+    }
+
+    #check:checked ~ul li {
+        display: block;
+    }
+}  
+
+
+#img-me {
+    display: flex;
+    position: absolute;
+    width: 300px; 
+    height: 300px; 
+    border: 4px solid #000000; 
+    border-radius: 10px;  
+    overflow: hidden; 
+    top: 22%;
+    left: 220px;
+    overflow: hidden;
+    
+}
+
+
+#img-me img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+    
+    
+}
+
+#about-me {
+    display: flex;
+    position: absolute;
+    background-color: transparent;
+    width: 500px;
+    height: 430px;
+    top: 19%;
+    left: 55%;
+    text-align: right;
+    overflow: hidden;
+}
+
+#about-me h1 {
+    font-size: 75px;
+    color :black;
+}
+
+h1 span {
+    font-size: 70px;
+    transition: transform 1s ease;
+}
+
+h1 span:hover {
+    transform: scale(1.2);
+}
+
+#icon-about {
+    margin-left: 190px;
+    position: absolute;
+    overflow: hidden;
+    font-size: 75px;
+    width:100px;
+    height: 100px;
+    transition: transform 1s ease;
+}
+
+#icon-about:hover {
+    transform: scale(1.2);
+}
+
+
+
+@media only screen and (max-width:938px) {
+    #img-me {
+        top: 100%;
+        left: 7%;
+        right: 50%;
+    }
+
+    #img-me:hover {
+        transform: none;
+
+    }
+
+    #about-me{
+        top: 160px;
+        left: 10%;
+        right: 50%;
+        z-index: 0;
+    }
+    
+}
+
+#stack  {
+    display: grid;
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    top: 90%;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+#stack h2 {
+    text-align: left;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    margin-top: 200px;
+    margin-left: 250px;
+    color:white;
+    font-size: 55px;
+
+}
+
+#stack #pin {
+    margin-top: 200px;
+    margin-left: 350px;
+    transition: transform 0.5s ease;
+}
+
+#stack #pin:hover {
+    transform: scale(1.1);
+}
+
+
+
+#icons {
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    margin-top: 105px;
+    margin-left: 49%;
+    border: 4px solid #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px white;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tarjeta {
+    width: 100px; 
+    height: 100px; 
+    background-color: transparent;
+    margin-top :45px;
+    margin-left: 45px;
+    box-sizing: border-box;
+    z-index: 1000;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s linear;
+}
+
+.tarjeta:hover {
+    transform: rotate(400deg);
+}
+
+.tarjeta i {
+    font-size: 70px;
+    color: white;
+}
+
+.tarjeta img {
+    width: 70px;
+    height: 70px;
+    filter: invert(100%);
+}
+
+.tarjeta span {
+    color: white;
+}
+#social  {
+    display: flex;
+    position: absolute;
+    width: 200px; 
+    height: 60px;
+    background-color: transparent;
+    border: 4px solid #000000; 
+    border-radius: 10px;
+    top: 70%;
+    left: 270px;    
+    align-items: center;
+    overflow: hidden;
+}
+
+#social a{
+    margin-left: 45px;
+    text-decoration: none;
+}
+
+#social .icon {
+    font-size: 35px;
+    color: #000000;
+    transition: transform 1s ease;
+
+    
+  }
+
+#social .icon:hover {
+    transform: scale(1.2);
+}
+
+#information-div {
+    margin-top: 90px;
+    margin-left: 300px;
+    width: 750px;
+    height: 400px;
+    background-color: transparent;
+    border: 4px solid #000000; 
+    border-radius: 10px;
+
+}
+
+
+
+#information-div h2 {
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+#information-div p {
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+#pattern-lines h1 {
+    position: absolute;
+    top: 300px;
+    font-size: 90px;
+}
+
+#second-pattern h1 {
+    position: absolute;
+    top:300px;
+    right: 0px;
+    font-size:90px;
+}
+
+#third-pattern h1 {
+    position: absolute;
+    top: 80px;
+    left: 640px;
+    font-size: 90px;
+    transform: rotate(90deg);
+}
+
+#fourth-pattern h1 {
+    position: absolute;
+    top: 580px;
+    left: 640px;
+    font-size: 90px;
+    transform: rotate(90deg);
+}
+
+#container-h1 {
+    position: absolute;
+    top: 130px;
+    left: 480px;
+    display: flex;
+    width: 400px;
+    height: 100px;
+    border: 4px solid #ffffff; 
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 4px solid #ffffff; 
+    border-radius: 10px;
+    transition: transform 1s ease;
+
+}
+
+#container-h1:hover {
+    transform: scale(1.1);
+}
+#container-h1 h1 {
+    font-size: 50px;
+    font-weight: normal;
+   
+;
+}
+
+#explication-h2 {
+    font-size: 30px;
+    font-weight: normal;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 
 <header class="header">
     <div id= logo>
-        <img src="{% static 'images/logo.png' %}" alt="creator-logo">
+        <a href="{% url 'home' %}"><h1>JF</h1></a>
     </div>
     <nav class ="nav-bar">
         <input type="checkbox" id="check">
@@ -14,13 +14,10 @@
                 <a href="{% url 'home' %}">HOME</a>
             </li>
             <li>
-                <a href="">ABOUT</a>
+                <a href="{% url 'about' %}">ABOUT</a>
             </li>
             <li>
-                <a href="">PROJECTS</a>
-            </li>
-            <li>
-                <a href="">CONTACT</a>
+                <a href="{% url 'projects' %}">PROJECTS</a>
             </li>
             <li>
                 <a href="{% static 'cv.pdf' %}">CV</a>

@@ -15,9 +15,12 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #000000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /* Header styles*/
 
@@ -28,8 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    border-bottom: 2px solid white ;
-    box-shadow: 0 0 15px white;
+
 }
 
 .header #logo {
@@ -107,6 +109,7 @@ body {
 @media only screen and  (max-width: 740px) {
     .checkbtn {
         display: block;
+        margin-top: -21px;
     }
 
     .header .nav-bar {
@@ -115,8 +118,8 @@ body {
 
     ul {
         position: fixed;
-        width: 50vh;
-        height: 100vh;
+        width: 20px;
+        height: 45%;
         background-color: gray;
         top: 95px;
         left: -200%;
@@ -127,8 +130,8 @@ body {
     }
 
     ul li {
-        margin-top: 40px;
-        margin-left: 30px;
+        margin-top: 32px;
+        margin-left: 26%;
     }
 
 
@@ -143,8 +146,8 @@ body {
     }
 
     #check:checked ~ ul {
-        left: 0%;
-        width: 100%;
+        left: 50%;
+        width: 40%;
         flex-direction: column ;
         
     }
@@ -158,14 +161,15 @@ body {
 #img-me {
     display: flex;
     position: absolute;
-    width: 300px; 
-    height: 300px; 
-    border: 4px solid #000000; 
+    width:280px; 
+    height: auto; 
+    border: 4px solid #ffffff; 
     border-radius: 10px;  
     overflow: hidden; 
-    top: 22%;
+    top: 31%;
     left: 220px;
     overflow: hidden;
+    border-radius: 20%;
     
 }
 
@@ -175,9 +179,111 @@ body {
     height: 100%;
 }
 
-@media only screen and (max-width: 1100px) {
-    
-    
+@media only screen and (max-width: 1000px) {
+
+    #img-me {
+        position: static;
+        margin:  0 auto;
+        margin-top: 15%;
+
+    }
+    #welcome-txt {
+        position: static;
+        margin-top: 69%;
+        margin-left: -150px;
+    }
+
+    #me-name {
+        position: static;
+        margin-top: 70%;
+        margin-left: -150px;
+    }
+
+    #about-me {
+        position: static;
+        max-width: 45%;
+        display: flex;
+        margin-top: 70%;
+        margin-left: -150px;
+
+    }
+
+    #about-me p {
+        max-width: 100vh;
+    }
+
+    #downl-cv {
+        position: static;
+        margin-top: 105%;
+        margin-left: -150px;
+    }
+
+    #social {
+        position: static;
+        margin-top: 105%;
+        margin-left: -120px;
+    }
+
+    #about {
+        height:500px ;
+    }
+
+    #title-about {
+        margin-top: 90%;
+    }
+
+    #text-about {
+        margin-top: 90%;
+        max-width: 60%;
+    }
+
+    #text-about p {
+        max-width: 100%;
+    }
+
+    #skill-card {
+        margin-top: 180%;
+        margin-left: -30px;
+        max-height: 90%;
+        max-width: 70%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 300px
+
+
+    }
+
+    .card {
+        transform: scale(0.7);
+
+
+
+    }
+
+}
+
+#welcome-txt {
+    position: absolute;
+    top: 30%;
+    left: 52%;
+
+}
+
+#me-name {
+    left: 52%;
+    top: 36%;
+}
+
+#me-name p {
+    font-size: 40px;
+    color:white;
+
+}
+
+#welcome-txt p {
+    font-weight: 100px;
+    font-size: 20px;  
+    color: grey;  
 }
 
 #about-me {
@@ -186,25 +292,24 @@ body {
     background-color: transparent;
     width: 500px;
     height: 430px;
-    top: 19%;
-    left: 55%;
-    text-align: right;
+    top: 48%;
+    left: 52%;
     overflow: hidden;
 }
 
-#about-me h1 {
-    font-size: 75px;
-    color :black;
+#about-me p {
+    font-size: 25px;
+    color:gray;
+    font-weight: 200px;
 }
 
-h1 span {
-    font-size: 70px;
-    transition: transform 1s ease;
+#me-name {
+    position: absolute;
 }
 
-h1 span:hover {
-    transform: scale(1.2);
-}
+
+
+
 
 #icon-about {
     margin-left: 190px;
@@ -213,7 +318,6 @@ h1 span:hover {
     font-size: 75px;
     width:100px;
     height: 100px;
-    transition: transform 1s ease;
 }
 
 #icon-about:hover {
@@ -222,26 +326,7 @@ h1 span:hover {
 
 
 
-@media only screen and (max-width:938px) {
-    #img-me {
-        top: 100%;
-        left: 7%;
-        right: 50%;
-    }
 
-    #img-me:hover {
-        transform: none;
-
-    }
-
-    #about-me{
-        top: 160px;
-        left: 10%;
-        right: 50%;
-        z-index: 0;
-    }
-    
-}
 
 #stack  {
     display: grid;
@@ -324,16 +409,38 @@ h1 span:hover {
 .tarjeta span {
     color: white;
 }
+
+#downl-cv {
+    display: flex;
+    position: absolute;
+    width: 100px;
+    background-color: white;
+   border: 2px solid white;
+   border-radius: 20px;
+   justify-content: center;
+   padding: 2px;
+   left: 52%;
+   top: 65%;
+   transition: transform 1s ease;
+}
+
+#downl-cv:hover {
+    transform: scale(1.1);
+}
+
+#downl-cv a {
+    text-decoration: none;
+    color:black;
+    font-weight: 600;
+}
 #social  {
     display: flex;
     position: absolute;
     width: 200px; 
     height: 60px;
     background-color: transparent;
-    border: 4px solid #000000; 
-    border-radius: 10px;
-    top: 70%;
-    left: 270px;    
+    top: 63%;
+    left: 70%;    
     align-items: center;
     overflow: hidden;
 }
@@ -345,7 +452,7 @@ h1 span:hover {
 
 #social .icon {
     font-size: 35px;
-    color: #000000;
+    color: #ffffff;
     transition: transform 1s ease;
 
     
@@ -442,18 +549,85 @@ h1 span:hover {
     font-size: 30px;
     font-weight: normal;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; 
+    color: white;
 }
 
 
 
+#about {
+    margin-top: 500px;
+    width: 100%;
+    height: 100px;
+}
+
+
+#title-about {
+    position: absolute;
+    top: 105%;
+    left: 17%;
+}
+
+#title-about p {
+    font-size: 45px;
+    color: white;
+    
+}
+
+#text-about {
+    position: absolute;
+    width: 900px;
+    top: 125%;
+    left: 17%;
+}
+
+#text-about p {
+    color: white;
+}
+
+#skill-card {
+    display: flex;
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    top: 155%;
+    left: 16%;
+
+}
+
+.card {
+    box-sizing: border-box;
+    width: 92px;
+    height: 90px;
+    margin-left: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card i {
+    font-size: 90px;
+    color: white;
+    transition: transform all 5s;
+}
+
+.card i:hover {
+    transform: scale(1.3);
+}
 
 
 
+.card img {
+    width: 90px;
+    height: 90px;
+    filter: invert();
+    transition: transform all 8s;
+}
 
-
-
+.card img:hover {
+    transform: scale(1.3);
+}
 

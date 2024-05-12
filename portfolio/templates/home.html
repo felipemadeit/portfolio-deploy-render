@@ -7,34 +7,57 @@
 {% endblock %}
 
 {% block body %}
+<section id="home">
     <div id="img-me">
         <img src="{% static '/media/julian.jpg' %}">
     </div> 
-    
-    <div id="about-me">
-        <h1 id="icon-about">&#x1F579;</h1>
-        <h1>I'M<br>JULIAN<br>BACK-END<br> DEVELOPER
-        </h1>
-    </div>
+        <div id ="welcome-txt">
+            <p>HI THERE! I´M</p>
+        </div>
+        <div id ="me-name">
+            <p>JULIÁN HOMEZ</p>
+        </div>
+        <div id="about-me">
+            <p>Back-End Developer with a passion for problem solving and continuous learning</p>
+        </div>
+        <div id="downl-cv"><a href="{% static 'media/cv.pdf' %}" download>CV</a></div>
+        <div id="social">
+            <a href="https://github.com/felipemadeit"><i class="fab fa-github icon"></i></a>
+            <a href="https://www.linkedin.com/in/julian-felipe/"><i class="fab fa-linkedin icon"></i></a>
+        </div>
+   
+</section>
 
-    <div id="social">
-        <a href="https://github.com/felipemadeit"><i class="fab fa-github icon"></i></a>
-        <a href="https://www.linkedin.com/in/julian-felipe/"><i class="fab fa-linkedin icon"></i></a>
-    </div>
-
-    <div id="stack">
-        <h2>MY<br>STACK</h2>
-        <h2 id="pin">&#x1F4CC</h2>
+    <!--<div id="stack">
+        <h2>SKILLS</h2>
       <div id="icons">
         <div class="tarjeta"><i class="fab fa-html5"></i></div>
         <div class="tarjeta"><i class="fab fa-css3-alt"></i></div>
         <div class="tarjeta"><i class="fab fa-python"></i></div>
-        <div class="tarjeta"><img src="{% static '/media/django.png' %}"></div>
+        <div class="tarjeta"><img src=""></div>
         <div class="tarjeta"><img src="{% static '/media/mysql.png' %}" alt="logo-mysql"></div>
         <div class="tarjeta"><i class="fab fa-java"></i>
         </div>
       </div>
 
        </div>
-    </div>
+    </div>-->
+    <section id="about">
+        <div id="title-about">
+            <p>About</p>
+        </div>
+        <div id="text-about">
+            <p>I am a Systems Engineering student with skills in Python, Java, MySQL, Django, HTML, CSS and the MVC design pattern. Experience in competitive programming and programming marathons. I seek professional opportunities that allow me to expand my knowledge, learn from experienced professionals, and contribute in a dynamic development environment. I am committed to continuous learning and have a B2 level of English.</p>
+        </div>
+        <div id="skill-card">
+            <div class="card"><i class="fab fa-html5"></i></div>
+            <div class="card"><i class="fab fa-css3-alt"></i></div>
+            <div class="card"><i class="fab fa-python"></i></div>
+            <div class="card"><img src="{% static '/media/django.png' %}"alt=""></div>
+            <div class="card"><img src="{% static '/media/mysql.png' %}" alt=""></div>
+            <div class="card"><i class="fab fa-java"></i>
+        </div>
+    </section>
+    <section id="projects">
+    </section>
 {% endblock %}
